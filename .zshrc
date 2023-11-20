@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 # alias to git controlled configruation
 # https://www.atlassian.com/git/tutorials/dotfiles
-alias dotfiles='/usr/bin/git --git-dir=/Users/goergemiguel/dotfiles/ --work-tree=/Users/goergemiguel'
+alias dotconfig='/usr/bin/git --git-dir=/Users/goergemiguel/dotconfig/ --work-tree=/Users/goergemiguel'
 
 # Starship Init
 # https://github.com/starship/starship

@@ -107,8 +107,6 @@ alias dotconfig='/usr/bin/git --git-dir=/Users/goergemiguel/dotconfig/ --work-tr
 # Starship Init
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
-# Custom config location for starship
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
 
 
 # Fish-like autosuggestions

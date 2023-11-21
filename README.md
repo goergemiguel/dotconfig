@@ -6,14 +6,14 @@ NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
 # Installing on new machine
 
+Clone repo to home directory
+```
+git clone --bare <git-repo-url> $HOME/dotconfig
+```
+
 Define the alias in the current shell:
 ```
 alias dotconfig='/usr/bin/git --git-dir=$HOME/dotconfig/ --work-tree=$HOME'
-```
-
-Add alias to .zshrc
-```
-echo "alias dotconfig='/usr/bin/git --git-dir=$HOME/dotconfig/ --work-tree=$HOME'" >> $HOME/.zshrc
 ```
 
 Checkout the actual content from the bare repository to your $HOME:

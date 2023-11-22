@@ -4,6 +4,15 @@ Following https://www.atlassian.com/git/tutorials/dotfiles to keep track of conf
 
 NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
+# Prerequisites
+- Neovim
+- Kitty Terminal
+- zsh
+- Starship prompt
+- Brew
+- zsh-autosuggestions.zsh
+- zsh-syntax highlighting.zsh
+
 # Installing on new machine
 
 Clone repo to home directory

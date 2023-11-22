@@ -9,6 +9,12 @@ alias dotconfig='/usr/bin/git --git-dir=/Users/goergemiguel/dotconfig/ --work-tr
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
 
+### Plugins installed via Homebrew
+
 # Fish-like autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Fish-like syntax highlighting
+# https://github.com/zsh-users/zsh-syntax-highlighting
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

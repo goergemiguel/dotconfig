@@ -13,8 +13,8 @@ eval "$(starship init zsh)"
 
 # Fish-like autosuggestions
 # https://github.com/zsh-users/zsh-autosuggestions
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Fish-like syntax highlighting
 # https://github.com/zsh-users/zsh-syntax-highlighting
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

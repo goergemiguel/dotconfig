@@ -56,6 +56,12 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
--- lsp server
-keymap.set("n", "<leader>lr", ":LspRestart<CR>") -- mapping to restart lsp if necessary
-keymap.set("n", "<leader>li", ":LspInfo<CR>") -- mapping to restart lsp if necessary
+-- LSP server
+keymap.set("n", "<leader>lr", ":LspRestart<CR>") -- Restart LSP servers
+keymap.set("n", "<leader>li", ":LspInfo<CR>") -- Check LSP info in current buffer
+
+-- LSP
+keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>") -- show documentation for what is under cursor
+keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>") -- show documentation for what is under cursor
+keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>") -- see available code actions
+keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>") -- smart rename

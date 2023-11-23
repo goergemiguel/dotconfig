@@ -1,35 +1,4 @@
 return {
-
-	-- {
-	-- 	"ray-x/lsp_signature.nvim",
-	-- 	lazy = true,
-	-- 	event = "BufRead",
-	-- 	config = function()
-	-- 		-- set floating windows position based on cursor position
-	-- 		local cfg = {
-	-- 			floating_window_off_x = 5, -- adjust float windows x position.
-	-- 			floating_window_off_y = function() -- adjust float windows y position. e.g. set to -2 can make floating window move up 2 lines
-	-- 				local linenr = vim.api.nvim_win_get_cursor(0)[1] -- buf line number
-	-- 				local pumheight = vim.o.pumheight
-	-- 				local winline = vim.fn.winline() -- line number in the window
-	-- 				local winheight = vim.fn.winheight(0)
-	--
-	-- 				-- window top
-	-- 				if winline - 1 < pumheight then
-	-- 					return pumheight
-	-- 				end
-	--
-	-- 				-- window bottom
-	-- 				if winheight - winline < pumheight then
-	-- 					return -pumheight
-	-- 				end
-	-- 				return 0
-	-- 			end,
-	-- 		}
-	-- 		require("lsp_signature").setup(cfg)
-	-- 	end,
-	-- },
-
 	{
 		"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
 		lazy = true,
@@ -44,6 +13,17 @@ return {
 		branch = "v3.x",
 		lazy = true,
 		config = false,
+	},
+	{
+		"nvimdev/lspsaga.nvim",
+
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter", -- optional
+			"nvim-tree/nvim-web-devicons", -- optional
+		},
+		config = function()
+			require("lspsaga").setup({})
+		end,
 	},
 	-- LSP Support
 	{
@@ -109,20 +89,23 @@ return {
 			})
 
 			---
+			-- Diagnositcs
+			---
+
+			-- Change the Diagnostic symbols in the sign column (gutter)
+			local signs = { Error = " ", Warn = " ", Hint = "ﴞ ", Info = " " }
+			for type, icon in pairs(signs) do
+				local hl = "DiagnosticSign" .. type
+				vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+			end
+
+			---
 			-- LSP configs
 			---
 			local lspconfig = require("lspconfig")
 
 			-- configure html server
 			lspconfig["html"].setup({})
-
-			-- lspconfig["tsserver"].setup({
-			-- 	on_attach = on_attach,
-			-- 	filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-			-- 	cmd = { "typescript-language-server", "--stdio" },
-			-- 	capabilities = capabilities,
-			-- 	root_dir = util.root_pattern(".git"),
-			-- })
 
 			-- configure css server
 			lspconfig["cssls"].setup({})

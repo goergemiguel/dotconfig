@@ -30,6 +30,67 @@ return {
 		end,
 	},
 
+	{
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		dependencies = {
+			{ "nvim-tree/nvim-web-devicons" },
+			{ "nvim-treesitter/nvim-treesitter" },
+		},
+		config = function()
+			require("lspsaga").setup({
+				-- keybinds for navigation in lspsaga window
+				scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
+				-- use enter to open file with definition preview
+				definition = {
+					edit = "<CR>",
+				},
+				ui = {
+					colors = {
+						normal_bg = "#022746",
+					},
+				},
+			})
+		end,
+	},
+
+	{
+		"ray-x/lsp_signature.nvim",
+		lazy = true,
+		event = "BufRead",
+		config = function()
+			-- set floating windows position based on cursor position
+			local cfg = {
+				floating_window_off_x = 5, -- adjust float windows x position.
+				floating_window_off_y = function() -- adjust float windows y position. e.g. set to -2 can make floating window move up 2 lines
+					local linenr = vim.api.nvim_win_get_cursor(0)[1] -- buf line number
+					local pumheight = vim.o.pumheight
+					local winline = vim.fn.winline() -- line number in the window
+					local winheight = vim.fn.winheight(0)
+
+					-- window top
+					if winline - 1 < pumheight then
+						return pumheight
+					end
+
+					-- window bottom
+					if winheight - winline < pumheight then
+						return -pumheight
+					end
+					return 0
+				end,
+			}
+			require("lsp_signature").setup(cfg)
+		end,
+	},
+
+	{
+		"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
+		lazy = true,
+		event = "BufRead",
+		config = function() end,
+	},
+
 	-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 	{
 		"neovim/nvim-lspconfig", -- easily configure language servers,
@@ -183,30 +244,6 @@ return {
 			lspconfig["csharp_ls"].setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
-			})
-		end,
-	},
-
-	{
-		"glepnir/lspsaga.nvim",
-		branch = "main",
-		dependencies = {
-			{ "nvim-tree/nvim-web-devicons" },
-			{ "nvim-treesitter/nvim-treesitter" },
-		},
-		config = function()
-			require("lspsaga").setup({
-				-- keybinds for navigation in lspsaga window
-				scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
-				-- use enter to open file with definition preview
-				definition = {
-					edit = "<CR>",
-				},
-				ui = {
-					colors = {
-						normal_bg = "#022746",
-					},
-				},
 			})
 		end,
 	},

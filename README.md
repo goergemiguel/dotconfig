@@ -13,15 +13,7 @@ NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 - zsh-autosuggestions.zsh
 - zsh-syntax highlighting.zsh
 
-Install prerequisites manually or running the install.zsh script
-
-```
-chmod +x install.zsh
-```
-
-```
-./install.zsh
-```
+>Install prerequisites manually or running the `install-dotconfig.sh` script
 
 # Installing on new machine
 

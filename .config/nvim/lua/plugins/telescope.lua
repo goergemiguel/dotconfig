@@ -16,6 +16,7 @@ return {
 							["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
 						},
 					},
+					file_ignore_patterns = { "node_modules" },
 				},
 			})
 		end,

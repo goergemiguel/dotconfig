@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # ------------------------------------------
-# Script to prerequisites for my dotfiles
+# Script to installing prerequisites for my dotfiles
 # ------------------------------------------
 
 # Install Homebrew

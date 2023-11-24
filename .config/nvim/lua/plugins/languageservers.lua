@@ -2,7 +2,7 @@ return {
 	{
 		"onsails/lspkind.nvim", -- vs-code like icons for autocompletion
 		lazy = true,
-		event = "BufRead",
+		event = "InsertEnter",
 		config = function() end,
 	},
 
@@ -16,7 +16,8 @@ return {
 	},
 	{
 		"nvimdev/lspsaga.nvim",
-
+		lazy = true,
+		event = "BufEnter",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter", -- optional
 			"nvim-tree/nvim-web-devicons", -- optional
@@ -28,8 +29,11 @@ return {
 	-- LSP Support
 	{
 		"neovim/nvim-lspconfig",
+		cmd = { "LspInfo", "LspInstall", "LspStart" },
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			{ "hrsh7th/cmp-nvim-lsp" },
+			{ "williamboman/mason-lspconfig.nvim" },
 		},
 		config = function()
 			---

@@ -117,7 +117,15 @@ return {
 			lspconfig["emmet_ls"].setup({})
 
 			-- configure lua server (with special settings)
-			lspconfig["lua_ls"].setup({})
+			lspconfig["lua_ls"].setup({
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim", "require" },
+						},
+					},
+				},
+			})
 
 			-- configure volar language server
 			lspconfig["volar"].setup({

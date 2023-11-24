@@ -43,6 +43,8 @@ return {
 				"vue",
 				"rust",
 				"toml",
+				"c_sharp",
+				"vue",
 			},
 			-- auto install above language parsers
 			auto_install = true,

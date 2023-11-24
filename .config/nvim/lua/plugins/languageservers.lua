@@ -49,7 +49,6 @@ return {
 					lsp_zero.default_setup,
 				},
 				ensure_installed = {
-					"tsserver",
 					"html",
 					"cssls",
 					"tailwindcss",

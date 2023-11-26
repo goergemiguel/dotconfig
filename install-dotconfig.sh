@@ -21,3 +21,6 @@ brew install starship
 
 # Install postgres@16 via Homebrew
 brew install postgresql@16
+
+# Install ripgrep via Homebrew
+brew install ripgrep

@@ -25,6 +25,10 @@ alias gp='git push'
 alias gs='git status'
 alias gl='git log'
 
+# Postgres commands
+alias pgstart='brew services start postgresql@16'
+alias pgstop='brew services stop postgresql@16'
+
 # ---------------------------------
 # PLUGINS
 # ---------------------------------
@@ -37,3 +41,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Fish-like syntax highlighting [https://github.com/zsh-users/zsh-syntax-highlighting]
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# POSTGRES PATH
+export PATH="/usr/local/opt/postgresql@16/bin:$PATH"

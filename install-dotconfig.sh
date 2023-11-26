@@ -18,3 +18,6 @@ brew install zsh-syntax-highlighting
 
 # Install starship via Homebrew
 brew install starship
+
+# Install postgres@16 via Homebrew
+brew install postgresql@16

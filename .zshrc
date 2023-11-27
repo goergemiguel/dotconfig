@@ -22,6 +22,7 @@ alias ...="cd ../../"
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
+alias gpf='git push --force'
 alias gs='git status'
 alias gl='git log'
 

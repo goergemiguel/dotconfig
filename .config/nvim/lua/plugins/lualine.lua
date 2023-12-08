@@ -1,31 +1,32 @@
 return {
 	"nvim-lualine/lualine.nvim",
 	config = function()
--- Bubbles config for lualine
--- Author: lokesh-krishna
--- MIT license, see LICENSE for more details.
+		-- Bubbles config for lualine
+		-- Author: lokesh-krishna
+		-- MIT license, see LICENSE for more details.
 
--- stylua: ignore
-local colors = {
-  blue   = '#80a0ff',
-  cyan   = '#79dac8',
-  black  = '#080808',
-  white  = '#c6c6c6',
-  red    = '#ff5189',
-  violet = '#3B8EA5',
-  grey   = '#303030',
-}
+		local colors = {
+			cyan = "#79dac8",
+			black = "#080808",
+			white = "#c6c6c6",
+			primary = "#17A398",
+			grey = "#303030",
+			pink = "#8B1E3F",
+			orange = "#DB4C40",
+			yellow = "#E9B44C",
+		}
 
 		local bubbles_theme = {
 			normal = {
-				a = { fg = colors.black, bg = colors.violet },
+				a = { fg = colors.black, bg = colors.primary },
 				b = { fg = colors.white, bg = colors.grey },
 				c = { fg = colors.black, bg = colors.black },
 			},
 
-			insert = { a = { fg = colors.black, bg = colors.blue } },
+			insert = { a = { fg = colors.black, bg = colors.yellow } },
 			visual = { a = { fg = colors.black, bg = colors.cyan } },
-			replace = { a = { fg = colors.black, bg = colors.red } },
+			replace = { a = { fg = colors.white, bg = colors.pink } },
+			command = { a = { fg = colors.black, bg = colors.orange } },
 
 			inactive = {
 				a = { fg = colors.white, bg = colors.black },
@@ -47,9 +48,9 @@ local colors = {
 				lualine_b = { "filename" },
 				lualine_c = { "fileformat" },
 				lualine_x = {},
-				lualine_y = { "filetype", "progress" },
+				lualine_y = { "filetype", "progress", "location" },
 				lualine_z = {
-					{ "location", separator = { right = "" }, left_padding = 2 },
+					{ "mode", separator = { right = "" }, left_padding = 2 },
 				},
 			},
 			inactive_sections = {

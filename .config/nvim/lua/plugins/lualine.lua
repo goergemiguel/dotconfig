@@ -9,7 +9,7 @@ return {
 			cyan = "#79dac8",
 			black = "#080808",
 			white = "#c6c6c6",
-			primary = "#17A398",
+			green = "#91F5AD",
 			grey = "#303030",
 			pink = "#8B1E3F",
 			orange = "#DB4C40",
@@ -18,7 +18,7 @@ return {
 
 		local bubbles_theme = {
 			normal = {
-				a = { fg = colors.black, bg = colors.primary },
+				a = { fg = colors.black, bg = colors.green },
 				b = { fg = colors.white, bg = colors.grey },
 				c = { fg = colors.black, bg = colors.black },
 			},

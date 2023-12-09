@@ -45,7 +45,7 @@ return {
 				lualine_a = {
 					{ "branch", separator = { left = "" }, right_padding = 2, gui = "bold" },
 				},
-				lualine_b = { "filename" },
+				lualine_b = { "filename", "diagnostics" },
 				lualine_c = { "fileformat" },
 				lualine_x = {},
 				lualine_y = { "filetype", "progress", "location" },

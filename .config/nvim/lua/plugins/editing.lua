@@ -19,12 +19,9 @@ return {
 		end,
 	},
 	{
-		"numtostr/comment.nvim",
+		"numToStr/comment.nvim",
 		lazy = true,
-		event = "cursormoved",
-		config = function()
-			require("comment").setup()
-		end,
+		event = "CursorMoved",
 	},
 	{
 		"kylechui/nvim-surround",

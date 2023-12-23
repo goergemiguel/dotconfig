@@ -45,3 +45,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # POSTGRES PATH
 export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
+
+# NODE PATH
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"

@@ -1,19 +1,8 @@
 return {
 	{
-		"rebelot/kanagawa.nvim", -- preferred colorscheme
+		"EdenEast/nightfox.nvim",
 		config = function()
-			require("kanagawa").setup({
-				colors = {
-					theme = {
-						all = {
-							ui = {
-								bg_gutter = "none",
-							},
-						},
-					},
-				},
-			})
-			vim.cmd("colorscheme kanagawa-wave")
+			vim.cmd("colorscheme nightfox")
 		end,
 	},
 	{

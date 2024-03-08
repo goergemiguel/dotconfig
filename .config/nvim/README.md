@@ -1,4 +1,5 @@
 # nvim
 my personal config for neovim
 
-![Screenshot 2023-11-18 at 12 59 42 PM](https://github.com/goergemiguel/nvim/assets/30315323/47eb91d1-8574-48a5-8a35-3e99a3fa513a)
+![Screenshot 2024-03-09 at 1 12 36 AM](https://github.com/goergemiguel/dotconfig/assets/30315323/8dca8a49-a097-4edb-add1-466fb1ff8098)
+

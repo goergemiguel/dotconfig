@@ -70,4 +70,17 @@ return {
 		end,
 	},
 	{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+	{
+		"hedyhli/outline.nvim",
+		config = function()
+			vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+			require("outline").setup({
+				opts = {
+					focus_outline = true,
+				},
+			})
+		end,
+		lazy = true,
+		event = "BufRead",
+	},
 }

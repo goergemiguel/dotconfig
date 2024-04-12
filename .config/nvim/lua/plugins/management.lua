@@ -1,7 +1,9 @@
 return {
 	{
 		"m4xshen/hardtime.nvim",
-		opts = {},
+		opts = {
+			disabled_filetypes = { "NvimTree", "Outline" },
+		},
 	},
 	{
 		"Shatur/neovim-session-manager",

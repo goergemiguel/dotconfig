@@ -19,9 +19,11 @@ return {
 		end,
 	},
 	{
-		"numToStr/comment.nvim",
-		lazy = true,
-		event = "CursorMoved",
+		"numToStr/Comment.nvim",
+		opts = {
+			-- add any options here
+		},
+		lazy = false,
 	},
 	{
 		"kylechui/nvim-surround",

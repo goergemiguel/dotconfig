@@ -64,6 +64,7 @@ return {
 					"gopls",
 					"rust_analyzer",
 					"csharp_ls",
+					"tsserver",
 				},
 			})
 
@@ -130,10 +131,19 @@ return {
 				},
 			})
 
-			-- configure volar language server
-			lspconfig["volar"].setup({
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue", "json" }, -- using takeover mode
+			lspconfig["tsserver"].setup({
+				filetypes = {
+					"javascript",
+					"javascriptreact",
+					"javascript.jsx",
+					"typescript",
+					"typescriptreact",
+					"typescript.tsx",
+					"vue",
+				},
 			})
+
+			lspconfig["volar"].setup({})
 
 			lspconfig["eslint"].setup({})
 

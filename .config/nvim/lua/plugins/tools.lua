@@ -35,4 +35,11 @@ return {
 			end, { expr = true, silent = true })
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		lazy = true,
+		event = "BufRead",
+		opts = {},
+	},
 }

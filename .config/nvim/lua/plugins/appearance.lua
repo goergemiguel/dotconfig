@@ -1,18 +1,42 @@
 return {
-	-- {
-	-- 	"EdenEast/nightfox.nvim",
-	-- 	config = function()
-	-- 		vim.cmd("colorscheme nightfox")
-	-- 	end,
-	-- },
 	{
-		"ellisonleao/gruvbox.nvim",
+		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
-			require("gruvbox").setup({
-				contrast = "hard",
+			require("catppuccin").setup({
+				flavour = "mocha",
+				integrations = {
+					cmp = true,
+					gitsigns = true,
+					nvimtree = true,
+					treesitter = true,
+					harpoon = true,
+					indent_blankline = {
+						enabled = true,
+						scope_color = "", -- catppuccin color (eg. `lavender`) Default: text
+						colored_indent_levels = false,
+					},
+					native_lsp = {
+						enabled = true,
+						virtual_text = {
+							errors = { "italic" },
+							hints = { "italic" },
+							warnings = { "italic" },
+							information = { "italic" },
+						},
+						underlines = {
+							errors = { "underline" },
+							hints = { "underline" },
+							warnings = { "underline" },
+							information = { "underline" },
+						},
+						inlay_hints = {
+							background = true,
+						},
+					},
+				},
 			})
-			vim.cmd("colorscheme gruvbox")
+			vim.cmd("colorscheme catppuccin")
 		end,
 	},
 	{

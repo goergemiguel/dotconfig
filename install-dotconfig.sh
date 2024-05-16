@@ -25,5 +25,8 @@ brew install postgresql@16
 # Install ripgrep via Homebrew
 brew install ripgrep
 
-# Instgall amethyst window tiling manager via Homebrew
+# Install amethyst window tiling manager via Homebrew
 brew install --cask amethyst
+
+# Install alfred
+brew install --cask alfred

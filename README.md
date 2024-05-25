@@ -6,7 +6,7 @@ NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
 # Prerequisites
 - Neovim
-- Kitty Terminal
+- Wezterm Terminal
 - zsh
 - Starship prompt
 - Brew

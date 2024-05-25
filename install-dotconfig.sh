@@ -10,6 +10,9 @@
 # Install Neovim via Homebrew
 brew install neovim
 
+# Install Tmux
+brew install tmux
+
 # Install zsh-autosuggestions via Homebrew
 brew install zsh-autosuggestions
 

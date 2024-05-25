@@ -6,7 +6,8 @@ NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
 # Prerequisites
 - Neovim
-- Wezterm Terminal
+- Tmux
+- WezTerm Terminal
 - zsh
 - Starship prompt
 - Brew

@@ -30,3 +30,6 @@ brew install --cask amethyst
 
 # Install alfred
 brew install --cask alfred
+
+# Install wezterm terminal
+brew install --cask wezterm

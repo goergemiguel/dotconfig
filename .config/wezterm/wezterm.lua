@@ -12,8 +12,9 @@ config.hide_tab_bar_if_only_one_tab = true
 config.enable_tab_bar = false
 config.use_fancy_tab_bar = false
 
--- Override key bindings to prevent creating new tabs
 config.keys = {
+
+	-- Override key bindings to prevent creating new tabs
 	{ key = "t", mods = "CMD", action = wezterm.action.DisableDefaultAssignment },
 	{ key = "t", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
 }

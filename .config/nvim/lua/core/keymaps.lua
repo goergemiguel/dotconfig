@@ -25,13 +25,10 @@ keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>ss", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
-keymap.set("n", "<leader>sh", "<C-w>h") -- move to window on left
-keymap.set("n", "<leader>sj", "<C-w>j") -- move to window below
-keymap.set("n", "<leader>sk", "<C-w>k") -- move to window above
-keymap.set("n", "<leader>sl", "<C-w>l") -- move to window right
-
--- clear search
-keymap.set("n", "<leader>x", ":nohlsearch<CR>")
+-- keymap.set("n", "<leader>sh", "<C-w>h") -- move to window on left
+-- keymap.set("n", "<leader>sj", "<C-w>j") -- move to window below
+-- keymap.set("n", "<leader>sk", "<C-w>k") -- move to window above
+-- keymap.set("n", "<leader>sl", "<C-w>l") -- move to window right
 
 ----------------------
 -- Plugin Keybinds

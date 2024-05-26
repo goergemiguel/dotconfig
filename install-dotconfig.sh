@@ -10,9 +10,6 @@
 # Install Neovim via Homebrew
 brew install neovim
 
-# Install Tmux
-brew install tmux
-
 # Install zsh-autosuggestions via Homebrew
 brew install zsh-autosuggestions
 
@@ -36,3 +33,14 @@ brew install --cask alfred
 
 # Install wezterm terminal
 brew install --cask wezterm
+
+# Install Tmux
+brew install tmux
+
+# Clone Tmux plugin manager if it doesn't already exist
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+fi
+
+# Install plugins via TPM
+$HOME/.tmux/plugins/tpm/bin/install_plugins

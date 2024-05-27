@@ -4,17 +4,16 @@ Following https://www.atlassian.com/git/tutorials/dotfiles to keep track of conf
 
 NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
-# Prerequisites
+# Inclusions
 - Neovim
 - Tmux
 - WezTerm Terminal
 - zsh
 - Starship prompt
-- Brew
+- Homebrew
 - zsh-autosuggestions.zsh
 - zsh-syntax highlighting.zsh
 
->Install prerequisites manually or running the `install-dotconfig.sh` script
 
 # Installing on new machine
 
@@ -22,6 +21,11 @@ Clone repo to home directory
 ```
 git clone --bare <git-repo-url> $HOME/dotconfig
 ```
+
+Run `install-dotconfig.sh` script
+
+
+# Add alias to dotconfig
 
 Define the alias in the current shell:
 ```
@@ -38,7 +42,10 @@ Set the flag showUntrackedFiles to no on this specific (local) repository:
 dotconfig config --local status.showUntrackedFiles no
 ```
 
-# Updating directories and files
+
+# Usage
+
+ ## Updating directories and files
 
 ```
 dotconfig status

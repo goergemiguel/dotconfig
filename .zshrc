@@ -30,6 +30,13 @@ alias gl='git log'
 alias pgstart='brew services start postgresql@16'
 alias pgstop='brew services stop postgresql@16'
 
+# TODO: tmux commands
+
+# Create tmux session
+alias tx='tmux'
+alias txa='tmux a'
+alias txt='tmux a -t'
+
 # ---------------------------------
 # PLUGINS
 # ---------------------------------

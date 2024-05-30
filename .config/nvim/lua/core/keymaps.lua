@@ -62,3 +62,6 @@ keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>") -- show documentation for wha
 keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>") -- show documentation for what is under cursor
 keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>") -- see available code actions
 keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>") -- smart rename
+
+-- Hop
+keymap.set("n", "<leader>hh", ":HopWord<CR>")

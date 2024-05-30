@@ -103,4 +103,11 @@ return {
 			{ "<c-s>", "<C-w>s" },
 		},
 	},
+	{
+		"smoka7/hop.nvim",
+		version = "*",
+		opts = {
+			keys = "etovxqpdygfblzhckisuran",
+		},
+	},
 }

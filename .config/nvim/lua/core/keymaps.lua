@@ -64,4 +64,5 @@ keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>") -- see available c
 keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>") -- smart rename
 
 -- Hop
-keymap.set("n", "<leader>hh", ":HopWord<CR>")
+keymap.set("n", "sh", ":HopWord<CR>", { silent = true })
+keymap.set("n", "sv", "v<cmd>HopWord<CR>", { silent = true })

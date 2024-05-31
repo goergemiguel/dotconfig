@@ -110,7 +110,6 @@ return {
 			require("hop").setup({
 				keys = "etovxqpdygfblzhckisuran",
 			})
-
 			local hop = require("hop")
 			local directions = require("hop.hint").HintDirection
 			vim.keymap.set("", "f", function()
@@ -125,8 +124,7 @@ return {
 			vim.keymap.set("", "T", function()
 				hop.hint_char1({ direction = directions.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })
 			end, { remap = true })
-
-			vim.keymap.set("n", "sh", ":HopWord<CR>", { silent = true })
+			vim.keymap.set("n", "sh", "<cmd>HopWord<CR>", { silent = true })
 			vim.keymap.set("n", "sv", "v<cmd>HopWord<CR>", { silent = true })
 		end,
 	},

@@ -20,16 +20,6 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
--- window management
--- keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
--- keymap.set("n", "<leader>ss", "<C-w>s") -- split window horizontally
--- keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
--- keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
--- keymap.set("n", "<leader>sh", "<C-w>h") -- move to window on left
--- keymap.set("n", "<leader>sj", "<C-w>j") -- move to window below
--- keymap.set("n", "<leader>sk", "<C-w>k") -- move to window above
--- keymap.set("n", "<leader>sl", "<C-w>l") -- move to window right
-
 ----------------------
 -- Plugin Keybinds
 ----------------------
@@ -46,6 +36,7 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in 
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>") -- list todos by Folke todo-comments plugin
 
 -- telescope git commands
 keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git commits (use <cr> to checkout) ["gc" for git commits]

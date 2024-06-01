@@ -44,3 +44,6 @@ fi
 
 # Install plugins via TPM
 $HOME/.tmux/plugins/tpm/bin/install_plugins
+
+# Install ollama to turn LLM locally
+brew install ollama

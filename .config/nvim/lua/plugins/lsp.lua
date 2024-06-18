@@ -169,7 +169,9 @@ return {
 
 			lspconfig["rust_analyzer"].setup({})
 
-			lspconfig["omnisharp"].setup({})
+			lspconfig["omnisharp"].setup({
+				cmd = { "dotnet", vim.fn.stdpath("data") .. "/mason/packages/omnisharp/libexec/OmniSharp.dll" },
+			})
 		end,
 	},
 }

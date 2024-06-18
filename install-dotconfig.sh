@@ -37,6 +37,9 @@ brew install --cask wezterm
 # Install Tmux
 brew install tmux
 
+# Install dotnet
+brew install dotnet
+
 # Clone Tmux plugin manager if it doesn't already exist
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

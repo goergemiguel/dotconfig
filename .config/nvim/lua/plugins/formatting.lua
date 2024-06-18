@@ -16,7 +16,6 @@ return {
 				vue = { "prettier", "rustywind" },
 				go = { "gofmt" },
 				rust = { "rustfmt" },
-				cs = { "csharpier" },
 			},
 		})
 	end,

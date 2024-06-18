@@ -63,8 +63,8 @@ return {
 					"svelte",
 					"gopls",
 					"rust_analyzer",
-					"csharp_ls",
 					"tsserver",
+					"omnisharp",
 				},
 			})
 
@@ -169,7 +169,7 @@ return {
 
 			lspconfig["rust_analyzer"].setup({})
 
-			lspconfig["csharp_ls"].setup({})
+			lspconfig["omnisharp"].setup({})
 		end,
 	},
 }

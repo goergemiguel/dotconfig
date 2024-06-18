@@ -3,6 +3,6 @@ return {
 
 		"nvim-lua/plenary.nvim", -- lua functions that many plugins use
 		lazy = true,
-		ft = "lua",
+		event = "BufEnter",
 	},
 }

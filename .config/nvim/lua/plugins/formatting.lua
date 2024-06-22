@@ -16,6 +16,13 @@ return {
 				vue = { "prettier", "rustywind" },
 				go = { "gofmt" },
 				rust = { "rustfmt" },
+				cs = { "csharpier" },
+			},
+			formatters = {
+				csharpier = {
+					command = "dotnet-csharpier",
+					args = { "--write-stdout" },
+				},
 			},
 		})
 	end,

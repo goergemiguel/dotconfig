@@ -53,3 +53,6 @@ $HOME/.tmux/plugins/tpm/bin/install_plugins
 
 # Install ollama to turn LLM locally
 brew install ollama
+
+# Install lazygit - GUI for git
+brew install lazygit

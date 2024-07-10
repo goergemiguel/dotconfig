@@ -23,7 +23,12 @@ return {
 			"nvim-tree/nvim-web-devicons", -- optional
 		},
 		config = function()
-			require("lspsaga").setup({})
+			require("lspsaga").setup({
+				symbol_in_winbar = {
+					-- disable breadcrumbs
+					enable = false,
+				},
+			})
 		end,
 	},
 	{ "Hoffs/omnisharp-extended-lsp.nvim", lazy = true },

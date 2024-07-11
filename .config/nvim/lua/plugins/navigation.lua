@@ -10,7 +10,7 @@ return {
 	{
 		"nvim-tree/nvim-tree.lua",
 		lazy = true,
-		cmd = "NvimTreeToggle",
+		cmd = { "NvimTreeToggle", "NvimTreeFindFileToggle" },
 		config = function()
 			-- recommended settings from nvim-tree documentation
 			vim.g.loaded_netrw = 1

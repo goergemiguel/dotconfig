@@ -17,6 +17,7 @@ return {
 				go = { "gofmt" },
 				rust = { "rustfmt" },
 				cs = { "csharpier" },
+				graphql = { "graphql", "prettier" },
 			},
 			formatters = {
 				csharpier = {

@@ -19,7 +19,7 @@ NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
 Clone repo to home directory
 ```
-git clone --bare <git-repo-url> $HOME/dotconfig
+git clone --bare https://github.com/goergemiguel/dotconfig.git $HOME/dotconfig
 ```
 
 Run `install-dotconfig.sh` script

@@ -14,7 +14,7 @@ dnf copr enable atim/starship
 dnf install starship
 
 # Install postgres@16 via Homebrew
-dnf install postgresql@16
+dnf install postgresql-server
 
 # Install ripgrep via Homebrew
 dnf install ripgrep

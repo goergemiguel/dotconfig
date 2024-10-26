@@ -20,6 +20,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Install Neovim via Flatpak
 flatpak install -y flathub io.neovim.nvim
 
+# Install Wezterm via Flatpak
+flatpak install flathub org.wezfurlong.wezterm
+
 # Install zsh-autosuggestions
 # TODO: use manual method https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#manual-git-clone
 

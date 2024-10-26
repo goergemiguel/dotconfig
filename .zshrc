@@ -54,3 +54,6 @@ export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
 
 # NODE PATH
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+
+# nvim path for linux
+export PATH="$PATH:/opt/nvim-linux64/bin"

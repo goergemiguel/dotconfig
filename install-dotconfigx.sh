@@ -18,7 +18,9 @@ sudo apt install -y flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install Neovim via Flatpak
-flatpak install -y flathub io.neovim.nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
 
 # Install Wezterm via Flatpak
 flatpak install flathub org.wezfurlong.wezterm

@@ -22,8 +22,6 @@ Clone repo to home directory
 git clone --bare https://github.com/goergemiguel/dotconfig.git $HOME/dotconfig
 ```
 
-Run `install-dotconfig.sh` script
-
 
 # Add alias to dotconfig
 
@@ -42,6 +40,7 @@ Set the flag showUntrackedFiles to no on this specific (local) repository:
 dotconfig config --local status.showUntrackedFiles no
 ```
 
+Finally run `install-dotconfig.sh` script
 
 # Usage
 

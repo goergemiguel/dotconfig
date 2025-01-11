@@ -43,6 +43,12 @@ brew install dotnet
 # Install Docker Desktop
 brew install --cask docker
 
+# Install Node version manager (Includes Node and NPM)
+brew install nvm
+
+# Install node and npm LTS versions
+nvm install --lts
+
 # Clone Tmux plugin manager if it doesn't already exist
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

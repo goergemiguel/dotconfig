@@ -42,6 +42,11 @@ dotconfig config --local status.showUntrackedFiles no
 
 Finally run `install-dotconfig.sh` script
 
+# Additional installs
+
+Manage commit signatures
+https://docs.github.com/en/authentication/managing-commit-signature-verification
+
 # Usage
 
  ## Updating directories and files

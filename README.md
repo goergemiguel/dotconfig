@@ -4,13 +4,10 @@ Following https://www.atlassian.com/git/tutorials/dotfiles to keep track of conf
 
 NOTE IMPORTANT: Using alias `dotconfig` instead of `config`
 
-# Inclusions
+# What is getting installed:
 - Neovim
-- Tmux
-- WezTerm Terminal
 - zsh
 - Starship prompt
-- Homebrew
 - zsh-autosuggestions.zsh
 - zsh-syntax highlighting.zsh
 
@@ -40,12 +37,8 @@ Set the flag showUntrackedFiles to no on this specific (local) repository:
 dotconfig config --local status.showUntrackedFiles no
 ```
 
-Finally run `install-dotconfig.sh` script
+Finally run init sh script
 
-# Additional installs
-
-Manage commit signatures
-https://docs.github.com/en/authentication/managing-commit-signature-verification
 
 # Usage
 

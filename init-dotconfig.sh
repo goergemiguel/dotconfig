@@ -13,12 +13,15 @@ sudo apt update && sudo apt install -y \
     git \
     curl \
     wget \
-    software-properties-common
+    software-properties-common \
+    fuse 
 
 # Install latest Neovim
 echo -e "${GREEN}Installing latest Neovim...${NC}"
-sudo add-apt-repository -y ppa:neovim-ppa/stable
-sudo apt update && sudo apt install -y neovim
+NEOVIM_URL="https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
+wget -O nvim.appimage $NEOVIM_URL
+chmod u+x nvim.appimage
+sudo mv nvim.appimage /usr/local/bin/nvim
 
 # Install zsh-autosuggestions
 echo -e "${GREEN}Installing zsh-autosuggestions...${NC}"

@@ -10,10 +10,15 @@ NC='\033[0m' # No Color
 echo -e "${GREEN}Updating packages and installing dependencies...${NC}"
 sudo apt update && sudo apt install -y \
     zsh \
-    neovim \
     git \
     curl \
-    wget
+    wget \
+    software-properties-common
+
+# Install latest Neovim
+echo -e "${GREEN}Installing latest Neovim...${NC}"
+sudo add-apt-repository -y ppa:neovim-ppa/stable
+sudo apt update && sudo apt install -y neovim
 
 # Install zsh-autosuggestions
 echo -e "${GREEN}Installing zsh-autosuggestions...${NC}"

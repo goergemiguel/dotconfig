@@ -3,7 +3,7 @@
 
 palette = "catppuccin_mocha"
 
-# format = '$username$host$character$directory$git_branch$git_status'
+format = '$username$hostname$character$directory$git_branch$git_status'
 
 # Inserts a blank line between shell prompts
 add_newline = true

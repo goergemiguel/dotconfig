@@ -2,8 +2,12 @@
 
 set -e  # Exit immediately if a command exits with a non-zero status
 
+# Define colors for output
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
 # Update package lists and install necessary packages
-echo "Updating packages and installing dependencies..."
+echo -e "${GREEN}Updating packages and installing dependencies...${NC}"
 sudo apt update && sudo apt install -y \
     zsh \
     neovim \
@@ -12,19 +16,19 @@ sudo apt update && sudo apt install -y \
     wget
 
 # Install zsh-autosuggestions
-echo "Installing zsh-autosuggestions..."
+echo -e "${GREEN}Installing zsh-autosuggestions...${NC}"
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 # Install zsh-syntax-highlighting
-echo "Installing zsh-syntax-highlighting..."
+echo -e "${GREEN}Installing zsh-syntax-highlighting...${NC}"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
 
 # Install Starship prompt
-echo "Installing Starship..."
+echo -e "${GREEN}Installing Starship...${NC}"
 curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # Add plugins and Starship to .zshrc
-echo "Configuring .zshrc..."
+echo -e "${GREEN}Configuring .zshrc...${NC}"
 if ! grep -q "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" ~/.zshrc; then
     echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 fi
@@ -38,7 +42,7 @@ if ! grep -q "eval \$(starship init zsh)" ~/.zshrc; then
 fi
 
 # Change default shell to zsh
-echo "Changing default shell to zsh..."
+echo -e "${GREEN}Changing default shell to zsh...${NC}"
 chsh -s $(which zsh)
 
-echo "Installation complete. Restart your terminal or run 'zsh' to start using it."
+echo -e "${GREEN}Installation complete. Restart your terminal or run 'zsh' to start using it.${NC}"

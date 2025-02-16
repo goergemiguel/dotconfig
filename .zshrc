@@ -50,3 +50,7 @@ export NVM_DIR="$HOME/.nvm"
 export HOSTNAME=$(hostname)
 
 alias dotconfig='/usr/bin/git --git-dir=$HOME/dotconfig/ --work-tree=$HOME'
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval $(starship init zsh)

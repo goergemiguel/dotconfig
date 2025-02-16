@@ -18,10 +18,16 @@ sudo apt update && sudo apt install -y \
 
 # Install latest Neovim
 echo -e "${GREEN}Installing latest Neovim...${NC}"
-NEOVIM_URL="https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
-wget -O nvim.appimage $NEOVIM_URL
-chmod u+x nvim.appimage
-sudo mv nvim.appimage /usr/local/bin/nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+rm nvim-linux-x86_64.tar.gz
+
+# Add Neovim to PATH if not already added
+echo -e "${GREEN}Configuring Neovim PATH...${NC}"
+if ! grep -q 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' ~/.zshrc; then
+    echo 'export PATH="$PATH:/opt/nvim-linux-x86_64/bin"' >> ~/.zshrc
+fi
 
 # Install zsh-autosuggestions
 echo -e "${GREEN}Installing zsh-autosuggestions...${NC}"

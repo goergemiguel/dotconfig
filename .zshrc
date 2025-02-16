@@ -43,21 +43,10 @@ alias txt='tmux a -t'
 # Starship Prompt [https://github.com/starship/starship]
 eval "$(starship init zsh)"
 
-# Fish-like autosuggestions [https://github.com/zsh-users/zsh-autosuggestions]
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Fish-like syntax highlighting [https://github.com/zsh-users/zsh-syntax-highlighting]
-source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# POSTGRES PATH
-export PATH="/usr/local/opt/postgresql@16/bin:$PATH"
-
-# NODE PATH
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
-
-# nvim path for linux
-export PATH="$PATH:/opt/nvim-linux64/bin"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export HOSTNAME=$(hostname)
+
+alias dotconfig='/usr/bin/git --git-dir=$HOME/dotconfig/ --work-tree=$HOME'

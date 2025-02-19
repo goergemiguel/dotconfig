@@ -35,12 +35,16 @@ alias txa='tmux a'
 alias txn='tmux new -s'
 alias txt='tmux a -t'
 
+
+#lazydocker
+alias lzd='lazydocker'
+
 # ---------------------------------
 # PLUGINS
 # ---------------------------------
 
 # Starship Prompt [https://github.com/starship/starship]
-eval "$(starship init zsh)"
+eval $(starship init zsh)
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -54,6 +58,6 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-eval $(starship init zsh)
-
-alias lzd='lazydocker'
+ # Fixes the "Inappropriate ioctl for device" error when committing
+ # https://github.com/keybase/keybase-issues/issues/2798
+export GPG_TTY=$(tty)

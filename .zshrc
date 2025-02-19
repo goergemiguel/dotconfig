@@ -1,5 +1,4 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.local/bin:$PATH"
 
 # ---------------------------------
 # ALIAS
@@ -9,7 +8,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 alias dotconfig='/usr/bin/git --git-dir=/Users/goergemiguel/dotconfig/ --work-tree=/Users/goergemiguel'
 
 # List directory contents, including hidden files, long listing format and colored output
-alias ll='ls -alG'
+alias ll='ls -al --color=always'
 
 # Clear terminal
 alias c='clear'
@@ -51,6 +50,10 @@ export HOSTNAME=$(hostname)
 
 alias dotconfig='/usr/bin/git --git-dir=$HOME/dotconfig/ --work-tree=$HOME'
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 eval $(starship init zsh)
+
+alias lzd='lazydocker'

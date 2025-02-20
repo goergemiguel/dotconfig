@@ -14,7 +14,8 @@ sudo apt update && sudo apt install -y \
     curl \
     wget \
     software-properties-common \
-    fuse 
+    fuse \
+    build-essential
 
 # Install latest Neovim
 echo -e "${GREEN}Installing latest Neovim...${NC}"

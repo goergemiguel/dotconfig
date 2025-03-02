@@ -15,11 +15,12 @@ sudo apt update && sudo apt install -y \
     wget \
     software-properties-common \
     fuse \
-    build-essential
+    build-essential \
+    tmux
 
 # Install latest Neovim
 echo -e "${GREEN}Installing latest Neovim...${NC}"
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+curl -LO https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-x86_64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
 rm nvim-linux-x86_64.tar.gz
@@ -55,6 +56,10 @@ fi
 if ! grep -q "eval \$(starship init zsh)" ~/.zshrc; then
     echo "eval \$(starship init zsh)" >> ~/.zshrc
 fi
+
+# Install Tmux Plugin Manager (TPM)
+echo -e "${GREEN}Installing Tmux Plugin Manager (TPM)...${NC}"
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Change default shell to zsh
 echo -e "${GREEN}Changing default shell to zsh...${NC}"
